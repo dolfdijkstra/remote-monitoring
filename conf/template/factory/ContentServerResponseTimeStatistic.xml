@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>com.fatwire.cs:type=StatFromTimeDebug,*</query>
+    <attributes>
+        <attribute name="Count" type="COUNTER" />
+        <attribute name="Max" type="GAUGE" />
+        <attribute name="Min" type="GAUGE" />
+        <attribute name="Average" type="GAUGE" />
+    </attributes>
+        <description-keys prefix="ContentServer">type,name</description-keys>
+</factory>

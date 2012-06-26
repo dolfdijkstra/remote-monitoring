@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>*:type=JspMonitor,*</query>
+    <attributes>
+        <attribute name="jspCount" type="COUNTER" />
+        <attribute name="jspReloadCount" type="COUNTER" />
+    </attributes>
+    <description-keys prefix="JspMonitor">name,WebModule</description-keys>
+    <db-template></db-template>
+</factory>

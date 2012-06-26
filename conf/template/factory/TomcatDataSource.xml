@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>*:type=DataSource,*</query>
+    <attributes>
+        <attribute name="numActive" type="GAUGE" />
+        <attribute name="numIdle" type="GAUGE" />
+    </attributes>
+    <description-keys prefix="DataSource">name</description-keys>
+    <db-template>TomcatDataSourceMetricFactory.xml</db-template>
+    <graph-templates>
+        <template>TomcatDataSource.xml</template>
+    </graph-templates>
+
+</factory>

@@ -1,0 +1,156 @@
+ObjectName = com.fatwire.cs:type=CacheManager,name="SystemLocaleString:locale" com.fatwire.cs.profiling.jmx.CacheStats
+	LastPrunedDate java.util.Date
+	Hits long 11
+	Misses long 2
+	Size long 1
+	ClearCount long 0
+	CreatedDate java.util.Date
+	RemoveCount long 0
+	LastFlushedDate java.util.Date
+ObjectName = com.fatwire.cs:type=CacheManager com.fatwire.cs.profiling.jmx.CacheManager
+	NumberOfCaches int 0
+
+ObjectName = com.fatwire.cs:type=RequestCounter com.fatwire.cs.profiling.concurrent.jmx.StatusCounter
+	ConcurrencyCount int 0
+	TotalCount long 937
+
+ObjectName = com.fatwire.cs:type=ResponseTimeStatistic,path=/cs/ContentServer,pagename=OpenMarket/Xcelerate/Actions/ProcessQueue com.fatwire.cs.profiling.servlet.jmx.ResponseTimeStatistic
+	WaitCount long 0
+	TotalTime java.math.BigDecimal
+	MinTime long 18
+	Average double
+	MaxTime long 0
+	TotalSystemTime java.math.BigDecimal
+	BlockCount long 23
+	Count int 28
+
+ObjectName = com.fatwire.cs:type=StatFromTimeDebug,group=element,subType=OpenMarket/Xcelerate/Actions/ProcessQueue com.fatwire.cs.profiling.logger.Stat
+	Type java.lang.String element
+	Max long 7875
+	Average double
+	SubType java.lang.String OpenMarket/Xcelerate/Actions/ProcessQueue
+	Min long 15
+	Count int 28
+
+ObjectName = java.lang:type=ClassLoading sun.management.ClassLoadingImpl
+	TotalLoadedClassCount long 8465
+	Verbose boolean false
+	UnloadedClassCount long 276
+	LoadedClassCount int 8189
+
+ObjectName = java.lang:type=Compilation sun.management.CompilationImpl
+	TotalCompilationTime long 47120
+	Name java.lang.String HotSpot Server Compiler
+	CompilationTimeMonitoringSupported boolean true
+
+ObjectName = java.lang:type=GarbageCollector,name=PS MarkSweep sun.management.GarbageCollectorImpl
+	CollectionCount long 8
+	LastGcInfo javax.management.openmbean.CompositeData
+	Name java.lang.String PS MarkSweep
+	Valid boolean true
+	CollectionTime long 49035
+	MemoryPoolNames [Ljava.lang.String;
+
+ObjectName = java.lang:type=GarbageCollector,name=PS Scavenge sun.management.GarbageCollectorImpl
+	CollectionCount long 85
+	LastGcInfo javax.management.openmbean.CompositeData
+	Name java.lang.String PS Scavenge
+	Valid boolean true
+	CollectionTime long 6660
+	MemoryPoolNames [Ljava.lang.String;
+
+ObjectName = java.lang:type=Memory sun.management.MemoryImpl
+	NonHeapMemoryUsage javax.management.openmbean.CompositeData
+	Verbose boolean false
+	ObjectPendingFinalizationCount int 0
+	HeapMemoryUsage javax.management.openmbean.CompositeData
+
+ObjectName = java.lang:type=MemoryManager,name=CodeCacheManager sun.management.MemoryManagerImpl
+	Name java.lang.String CodeCacheManager
+	Valid boolean true
+	MemoryPoolNames [Ljava.lang.String;
+
+ObjectName = java.lang:type=MemoryPool,name=Code Cache sun.management.MemoryPoolImpl
+	Type java.lang.String NON_HEAP
+	CollectionUsageThreshold long
+	CollectionUsageThresholdExceeded boolean
+	MemoryManagerNames [Ljava.lang.String;
+	CollectionUsageThresholdSupported boolean false
+	Usage javax.management.openmbean.CompositeData
+	Valid boolean true
+	PeakUsage javax.management.openmbean.CompositeData
+	UsageThresholdCount long 0
+	UsageThresholdSupported boolean true
+	CollectionUsage javax.management.openmbean.CompositeData
+	UsageThresholdExceeded boolean true
+	Name java.lang.String Code Cache
+	UsageThreshold long 0
+	CollectionUsageThresholdCount long
+
+ObjectName = java.lang:type=MemoryPool,name=PS Eden Space sun.management.MemoryPoolImpl
+	Type java.lang.String HEAP
+	CollectionUsageThreshold long 0
+	CollectionUsageThresholdExceeded boolean true
+	MemoryManagerNames [Ljava.lang.String;
+	CollectionUsageThresholdSupported boolean true
+	Usage javax.management.openmbean.CompositeData
+	Valid boolean true
+	PeakUsage javax.management.openmbean.CompositeData
+	UsageThresholdCount long
+	UsageThresholdSupported boolean false
+	CollectionUsage javax.management.openmbean.CompositeData
+	UsageThresholdExceeded boolean
+	Name java.lang.String PS Eden Space
+	UsageThreshold long
+	CollectionUsageThresholdCount long 0
+
+ObjectName = java.lang:type=MemoryPool,name=PS Old Gen sun.management.MemoryPoolImpl
+	Type java.lang.String HEAP
+	CollectionUsageThreshold long 0
+	CollectionUsageThresholdExceeded boolean true
+	MemoryManagerNames [Ljava.lang.String;
+	CollectionUsageThresholdSupported boolean true
+	Usage javax.management.openmbean.CompositeData
+	Valid boolean true
+	PeakUsage javax.management.openmbean.CompositeData
+	UsageThresholdCount long 0
+	UsageThresholdSupported boolean true
+	CollectionUsage javax.management.openmbean.CompositeData
+	UsageThresholdExceeded boolean true
+	Name java.lang.String PS Old Gen
+	UsageThreshold long 0
+	CollectionUsageThresholdCount long 0
+
+ObjectName = java.lang:type=MemoryPool,name=PS Perm Gen sun.management.MemoryPoolImpl
+	Type java.lang.String NON_HEAP
+	CollectionUsageThreshold long 0
+	CollectionUsageThresholdExceeded boolean true
+	MemoryManagerNames [Ljava.lang.String;
+	CollectionUsageThresholdSupported boolean true
+	Usage javax.management.openmbean.CompositeData
+	Valid boolean true
+	PeakUsage javax.management.openmbean.CompositeData
+	UsageThresholdCount long 0
+	UsageThresholdSupported boolean true
+	CollectionUsage javax.management.openmbean.CompositeData
+	UsageThresholdExceeded boolean true
+	Name java.lang.String PS Perm Gen
+	UsageThreshold long 0
+	CollectionUsageThresholdCount long 0
+
+ObjectName = java.lang:type=MemoryPool,name=PS Survivor Space sun.management.MemoryPoolImpl
+	Type java.lang.String HEAP
+	CollectionUsageThreshold long 0
+	CollectionUsageThresholdExceeded boolean true
+	MemoryManagerNames [Ljava.lang.String;
+	CollectionUsageThresholdSupported boolean true
+	Usage javax.management.openmbean.CompositeData
+	Valid boolean true
+	PeakUsage javax.management.openmbean.CompositeData
+	UsageThresholdCount long
+	UsageThresholdSupported boolean false
+	CollectionUsage javax.management.openmbean.CompositeData
+	UsageThresholdExceeded boolean
+	Name java.lang.String PS Survivor Space
+	UsageThreshold long
+	CollectionUsageThresholdCount long 0

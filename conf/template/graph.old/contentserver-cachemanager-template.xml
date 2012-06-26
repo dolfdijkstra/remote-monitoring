@@ -1,0 +1,81 @@
+<rrd_graph_def>
+  <filename>${imagefile}</filename>
+  <span>
+    <start>${intervalstart}</start>
+    <end>${intervalend}</end>
+  </span>
+  <options>
+    <title>${imagetitle}</title>
+    <width>600</width>
+    <height>200</height>
+    <units_exponent>0</units_exponent>
+    <rigid>true</rigid>
+    <logarithmic>${logarithmic}</logarithmic>
+    <min_value>0</min_value>    
+  </options>
+
+  <datasources>
+    <def>
+      <name>Hits</name>
+      <rrd>${rrdfile}</rrd>
+      <source>Hits</source>
+      <cf>AVERAGE</cf>
+    </def>
+    <def>
+      <name>Misses</name>
+      <rrd>${rrdfile}</rrd>
+      <source>Misses</source>
+      <cf>AVERAGE</cf>
+    </def>
+    <def>
+      <name>Size</name>
+      <rrd>${rrdfile}</rrd>
+      <source>Size</source>
+      <cf>AVERAGE</cf>
+    </def>
+    <def>
+      <name>ClearCount</name>
+      <rrd>${rrdfile}</rrd>
+      <source>ClearCount</source>
+      <cf>AVERAGE</cf>
+    </def>
+    <def>
+      <name>RemoveCount</name>
+      <rrd>${rrdfile}</rrd>
+      <source>RemoveCount</source>
+      <cf>AVERAGE</cf>
+    </def>
+
+  </datasources>
+  <graph> 
+    <line>
+      <datasource>Hits</datasource>
+      <color>#00FF00</color>
+      <legend>Hits (hits/s)</legend>
+    </line>
+    <line>
+      <datasource>Misses</datasource>
+      <color>#FF0000</color>
+      <legend>Misses (miss/s)</legend>
+    </line>
+    <area>
+      <datasource>Size</datasource>
+      <color>#000000</color>
+      <legend>Size</legend>
+    </area>
+    <line>
+      <datasource>ClearCount</datasource>
+      <color>#0000FF</color>
+      <legend>Clears</legend>
+    </line>
+    <line>
+      <datasource>RemoveCount</datasource>
+      <color>#00FFFF</color>
+      <legend>RemoveCount</legend>
+    </line>
+
+    <comment>\r</comment>
+    <comment>${generatedstamp}</comment>
+
+  </graph>
+</rrd_graph_def>

@@ -1,0 +1,2 @@
+<databases>
+<metric><file>c:/etc.rrd</file><title>Hello</title></metric>

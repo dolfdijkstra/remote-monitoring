@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rrd_graph_def>
+    <filename>${imagefile}</filename>
+    <span>
+        <start>${intervalstart}</start>
+        <end>${intervalend}</end>
+    </span>
+    <options>
+        <title>${imagetitle} - File Descriptor</title>
+        <width>800</width>
+        <height>200</height>
+        <rigid>false</rigid>
+        <logarithmic>${logarithmic}</logarithmic>
+        <min_value>0</min_value>
+        <image_format>png</image_format>
+        <alt_y_grid>true</alt_y_grid>
+    </options>
+    <datasources>
+        <def>
+            <name>of-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>OpenFileDescripto...</source>
+            <cf>AVERAGE</cf>
+        </def>
+        <def>
+            <name>of-last</name>
+            <rrd>${rrdfile}</rrd>
+            <source>OpenFileDescripto...</source>
+            <cf>LAST</cf>
+        </def>
+
+    </datasources>
+    <graph>
+        <line>
+            <datasource>of-avg</datasource>
+            <color>#ff0000</color>
+            <legend>OpenFileDescriptors</legend>
+            <width>2</width>
+        </line>
+        <gprint>
+            <datasource>of-last</datasource>
+            <cf>LAST</cf>
+            <format>Current = %lf</format>
+    </gprint>
+        
+    </graph>
+</rrd_graph_def>

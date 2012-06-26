@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rrd_graph_def>
+    <filename>${imagefile}</filename>
+    <span>
+        <start>${intervalstart}</start>
+        <end>${intervalend}</end>
+    </span>
+    <options>
+        <title>${imagetitle} - System Load Average</title>
+        <width>800</width>
+        <height>200</height>
+        <rigid>false</rigid>
+        <logarithmic>${logarithmic}</logarithmic>
+        <min_value>0</min_value>
+        <image_format>png</image_format>
+        <alt_y_grid>true</alt_y_grid>
+    </options>
+    <datasources>
+        <def>
+            <name>load-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>SystemLoadAverage</source>
+            <cf>AVERAGE</cf>
+        </def>
+    </datasources>
+    <graph>
+        <line>
+            <datasource>load-avg</datasource>
+            <color>#0000ff</color>
+            <legend>SystemLoadAverage</legend>
+            <width>2</width>
+        </line>
+    </graph>
+</rrd_graph_def>

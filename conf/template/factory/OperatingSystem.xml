@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>java.lang:type=OperatingSystem</query>
+    <attributes>
+        <attribute name="FreePhysicalMemorySize" type="GAUGE" />
+        <attribute name="FreeSwapSpaceSize" type="GAUGE" />
+        <attribute name="OpenFileDescriptorCount" type="GAUGE" />
+        <attribute name="TotalPhysicalMemorySize" type="GAUGE" />
+        <attribute name="TotalSwapSpaceSize" type="GAUGE" />
+        <attribute name="CommittedVirtualMemorySize" type="GAUGE" />
+        <attribute name="ProcessCpuTime" type="COUNTER" />
+        <attribute name="SystemLoadAverage" type="GAUGE" />
+    </attributes>
+    <description-keys prefix="OperatingSystem"></description-keys>
+    <db-template>OperatingSystem.xml</db-template>
+    <graph-templates>
+        <template>OperatingSystem-1.xml</template>
+        <template>OperatingSystem-2.xml</template>
+        <template>OperatingSystem-3.xml</template>
+    </graph-templates>
+</factory>

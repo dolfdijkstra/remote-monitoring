@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>com.fatwire.cs:type=Cache,*</query>
+    <attributes>
+        <attribute name="Hits" type="COUNTER" />
+        <attribute name="RemoveCount" type="COUNTER" />
+        <attribute name="Misses" type="COUNTER" />
+        <attribute name="ClearCount" type="COUNTER" />
+        <attribute name="Size" type="GAUGE" />
+    </attributes>
+    <description-keys prefix="ContentServer">type,name</description-keys>
+</factory>

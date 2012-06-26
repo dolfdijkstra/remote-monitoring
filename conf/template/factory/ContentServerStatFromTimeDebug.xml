@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory>
+    <query>com.fatwire.cs:type=ResponseTimeStatistic,*</query>
+    <attributes>
+        <attribute name="BlockCount" type="COUNTER" />
+        <attribute name="Count" type="COUNTER" />
+        <attribute name="WaitCount" type="COUNTER" />
+        <attribute name="MaxTime" type="GAUGE" />
+        <attribute name="MinTime" type="GAUGE" />
+        <attribute name="Average" type="GAUGE" />
+    </attributes>
+    <description-keys prefix="ResponseTimeStatistic">type,path,pagename</description-keys>
+</factory>

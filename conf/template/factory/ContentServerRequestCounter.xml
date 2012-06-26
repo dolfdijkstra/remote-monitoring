@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<factory class="com.fatwire.management.jmx.factory.ContentServerCacheManagerMetricFactory">
+    <query>com.fatwire.cs:type=RequestCounter</query>
+    <attributes>
+        <attribute name="TotalCount" type="COUNTER" />
+        <attribute name="ConcurrencyCount" type="GAUGE" />
+    </attributes>
+    <description-keys prefix="ServletRequestCounter"></description-keys>
+    <db-template>ContentServerRequestCounter.xml</db-template>
+    <graph-templates>
+        <template>ContentServerRequestCounter.xml</template>
+    </graph-templates>
+</factory>

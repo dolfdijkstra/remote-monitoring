@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rrd_graph_def>
+    <filename>${imagefile}</filename>
+    <span>
+        <start>${intervalstart}</start>
+        <end>${intervalend}</end>
+    </span>
+    <options>
+        <title>${imagetitle}</title>
+        <width>800</width>
+        <height>200</height>
+        <rigid>false</rigid>
+        <logarithmic>${logarithmic}</logarithmic>
+        <min_value>0</min_value>
+        <image_format>png</image_format>
+    </options>
+    <datasources>
+        <def>
+            <name>total-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>TotalCount</source>
+            <cf>AVERAGE</cf>
+        </def>
+        <def>
+            <name>concur-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>ConcurrencyCount</source>
+            <cf>AVERAGE</cf>
+        </def>
+    </datasources>
+    <graph>
+        <line>
+            <datasource>total-avg</datasource>
+            <color>#ff0000</color>
+            <legend>Request / s </legend>
+            <width>2</width>
+        </line>
+        <line>
+            <datasource>concur-avg</datasource>
+            <color>#0000ff</color>
+            <legend>Concurrency</legend>
+            <width>2</width>
+        </line>
+    </graph>
+</rrd_graph_def>

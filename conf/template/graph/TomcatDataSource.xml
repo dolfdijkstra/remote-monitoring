@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rrd_graph_def>
+    <filename>${imagefile}</filename>
+    <span>
+        <start>${intervalstart}</start>
+        <end>${intervalend}</end>
+    </span>
+    <options>
+        <title>${imagetitle}</title>
+        <width>600</width>
+        <height>200</height>
+        <units_exponent>0</units_exponent>
+        <rigid>true</rigid>
+        <logarithmic>${logarithmic}</logarithmic>
+        <min_value>0</min_value>
+        <image_format>png</image_format>
+    </options>
+    <datasources>
+        <def>
+            <name>idle-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>numIdle</source>
+            <cf>AVERAGE</cf>
+        </def>
+        <def>
+            <name>active-avg</name>
+            <rrd>${rrdfile}</rrd>
+            <source>numActive</source>
+            <cf>AVERAGE</cf>
+        </def>
+    </datasources>
+    <graph>
+        <area>
+            <datasource>active-avg</datasource>
+            <color>#0000ff</color>
+            <legend>numActive</legend>
+            <!-- width>2</width-->
+        </area>
+        <stack>
+            <datasource>idle-avg</datasource>
+            <color>#00ffff</color>
+            <legend>numIdle</legend>
+            <!-- width>2</width-->
+        </stack>
+    </graph>
+</rrd_graph_def>
